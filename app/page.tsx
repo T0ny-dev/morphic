@@ -1,9 +1,23 @@
 'use client'
+import { Chat } from '@/components/chat';
+import { Hero } from "@/components/hero"
+import { useUser } from "@auth0/nextjs-auth0/client";
 
-import { Chat } from '@/components/chat'
 
-export const runtime = 'edge'
+
+
+export const runtime = 'edge';
 
 export default function Page() {
-  return <Chat />
+
+  const { user } = useUser();
+
+  return (
+    <>
+      {!user && (<Hero />)}
+      {user && (<Chat />)}
+    </>
+  );
 }
+
+

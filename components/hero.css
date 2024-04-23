@@ -1,0 +1,12 @@
+#logo {
+  animation: rotate infinite 15s linear; /* La animación dura infinitamente, se repite cada 5 segundos, con una velocidad lineal */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* La rotación comienza desde 0 grados */
+  }
+  to {
+    transform: rotate(360deg); /* La rotación llega a 360 grados */
+  }
+}

@@ -6,15 +6,16 @@ import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans'
 })
 
-const title = 'Morphic'
+const title = 'Chatbot Nexus Marketing IA'
 const description =
-  'A fully open-source AI-powered answer engine with a generative UI.'
+  'Chatbot de Marketing Digital Nexus Marketing AI.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://morphic.sh'),
@@ -45,19 +46,21 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased', fontSans.variable)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <AI>{children}</AI>
-          <Footer />
-        </ThemeProvider>
-      </body>
+    <html lang="es" suppressHydrationWarning>
+      <UserProvider>
+        <body className={cn('font-sans antialiased', fontSans.variable)}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <AI>{children}</AI>
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </UserProvider>
     </html>
   )
 }
