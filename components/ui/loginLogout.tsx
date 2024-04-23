@@ -1,5 +1,6 @@
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useTheme } from 'next-themes';
+import Link from 'next/link'
 
 function LoginLogout() {
   const { theme } = useTheme();
@@ -13,7 +14,7 @@ function LoginLogout() {
   return (
     <div className="flex justify-center mr-6 items-center">
       {!user && (
-        <a href="/api/auth/login">
+        <Link href="/api/auth/login">
           <button className="flex items-center text-lg">
             Iniciar sesión
             <img
@@ -22,7 +23,7 @@ function LoginLogout() {
               alt="Icono de inicio de sesión"
             />
           </button>
-        </a>
+        </Link>
       )}
       {user && (
         <a href="/api/auth/logout">
