@@ -1,5 +1,6 @@
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useTheme } from 'next-themes';
+import Image from 'next/image'
 import Link from 'next/link'
 
 function LoginLogout() {
@@ -7,7 +8,7 @@ function LoginLogout() {
   const { user } = useUser();
 
   // Determinar la URL de la imagen según el tema
-  const lightImageSrc = '/vector_black.svg'; // Ruta relativa
+  const lightImageSrc = '/vector.svg'; // Ruta relativa
   const darkImageSrc = '/vector.svg'; // Ruta relativa
   const imageSrc = theme === 'dark' ? darkImageSrc : lightImageSrc;
 
@@ -17,18 +18,14 @@ function LoginLogout() {
         <Link href="/api/auth/login">
           <button className="flex items-center text-lg">
             Iniciar sesión
-            <img
-              className="h-3 w-3 ml-2"
-              src={imageSrc}
-              alt="Icono de inicio de sesión"
-            />
+            <Image src={imageSrc} alt="" width={15} height={15} style={{ marginLeft: "1vw" }} />
           </button>
         </Link>
       )}
       {user && (
-        <a href="/api/auth/logout">
+        <Link href="/api/auth/logout">
           <button>Cerrar sesión</button>
-        </a>
+        </Link>
       )}
     </div>
   );

@@ -19,7 +19,8 @@ export const Header: React.FC = () => {
     <header className="fixed w-full p-0 md:p-3 flex justify-between items-center z-10 backdrop-blur md:backdrop-blur-none bg-background/80 md:bg-transparent">
       <div className="flex p-2 items-center">
         <Link href='/'>
-          <Image src={imageSrc} alt="" width={35} height={35} />        </Link>
+          <Image src={imageSrc} alt="" width={35} height={35} />
+        </Link>
       </div>
       <div className='flex'>
         <LoginLogout />
