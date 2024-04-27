@@ -18,8 +18,8 @@ export function Hero() {
         </div>
       </div>
       <div className="w-1/2 flex flex-col justify-center items-start max-w-1/2">
-        <p className="text-lg">chatbot IA</p>
-        <h2 className="text-3xl font-bold">Nexus Marketing</h2>
+        <p className="text-lg">ChatNexus IA</p>
+        <h2 className="text-3xl font-bold">Agencia Nexus Marketing</h2>
         <Image className="h-12 w-auto mt-4 mb-8" src="/input_search.svg" alt="Input Icon" width={100} height={100} />
         <div className="flex" style={{ flexWrap: "wrap" }}>
           <span className="my-2 font-bold mr-4" style={{ color: "#0f0f0f", backgroundColor: "#E2FF69", borderRadius: "30px", padding: "1vh 2vw" }}>Plan de Marketing</span>
