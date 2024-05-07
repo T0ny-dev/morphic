@@ -11,3 +11,75 @@
     transform: rotate(360deg); /* La rotación llega a 360 grados */
   }
 }
+
+
+
+@media (max-width: 750px) {
+
+  .text-3xl {
+    font-size: 1.5em;
+  }
+
+  .text-lg {
+    font-size: 1em;
+  }
+
+  #hero_nexus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #logo_image {
+    display: flex;
+    padding-top: 10vh;
+    justify-content: flex-start;
+  }
+
+  #seach {
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+  }
+
+  #logo {
+    width: 120px;
+    margin-bottom: 5vh;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .text-3xl {
+    font-size: 1.5em;
+  }
+
+  .text-lg {
+    font-size: 1em;
+  }
+
+  #hero_nexus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #logo_image {
+    display: flex;
+    padding-top: 10vh;
+    justify-content: start;
+  }
+
+  #logo {
+    margin-top: 5vh;
+    width: 90px;
+    margin-bottom: 5vh;
+  }
+
+  #span_yellow {
+    font-size: .7em;
+  }
+
+
+}
